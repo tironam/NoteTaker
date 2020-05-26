@@ -7,6 +7,8 @@ app.use(express.static(join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
+// app.use(require('./routes/index.js'))
+
 app.get('/notes', (req, res) => {
     res.sendFile(join(__dirname, './public/notes.html'))
 })
